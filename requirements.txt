@@ -1,0 +1,66 @@
+## AI Personal Intelligence Copilot
+## 100% FREE API Stack — No paid services required
+
+# ── LLM: Groq (FREE) ─────────────────────────────────────────────────────────
+# Get free API key at https://console.groq.com (no credit card)
+# Provides LLaMA-3.3-70B, Mixtral, Gemma2 — all free
+groq==0.9.0
+
+# ── LangChain Orchestration ───────────────────────────────────────────────────
+langchain==0.1.20
+langchain-community==0.0.38
+langchain-groq==0.1.6            # LangChain ↔ Groq integration
+
+# ── Embeddings: HuggingFace LOCAL (FREE, no key needed) ──────────────────────
+sentence-transformers==2.7.0     # all-MiniLM-L6-v2, runs locally
+transformers==4.41.1
+torch==2.3.0                     # CPU version is fine for embeddings
+
+# ── Vector Databases (FREE, local) ───────────────────────────────────────────
+faiss-cpu==1.8.0                 # Facebook AI Similarity Search
+chromadb==0.5.0                  # Alternative vector DB
+
+# ── Backend ───────────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+pydantic==2.7.1
+pydantic-settings==2.2.1
+
+# ── Frontend ──────────────────────────────────────────────────────────────────
+streamlit==1.35.0
+
+# ── Data Processing ───────────────────────────────────────────────────────────
+pandas==2.2.2
+numpy==1.26.4
+
+# ── Database (local) ─────────────────────────────────────────────────────────
+sqlalchemy==2.0.30
+aiosqlite==0.20.0
+
+# ── Document Processing ───────────────────────────────────────────────────────
+pypdf==4.2.0
+python-docx==1.1.2
+
+# ── Utilities ────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1
+httpx==0.27.0
+tenacity==8.3.0
+loguru==0.7.2
+tiktoken==0.7.0
+
+# ── Dev / Testing ─────────────────────────────────────────────────────────────
+pytest==8.2.1
+black==24.4.2
+
+## ─────────────────────────────────────────────────────────────────────────────
+## QUICK START:
+##   1. pip install -r requirements.txt
+##   2. cp .env.example .env
+##   3. Add your FREE Groq key from https://console.groq.com
+##   4. streamlit run ui/streamlit_app.py
+##
+## NOTE: torch installs as CPU-only by default (for embeddings).
+## For GPU acceleration:
+##   pip install torch --index-url https://download.pytorch.org/whl/cu121
+## ─────────────────────────────────────────────────────────────────────────────
